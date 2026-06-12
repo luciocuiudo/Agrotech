@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho 2026 - Lucio Lopes Boza</title>
+
+<style>
+/* ===== CSS ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{background:#f4f8f4;color:#333;}
+
+header{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url('https://images.unsplash.com/photo-1600111527994-1f236cf11e28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VufDF8fGZhbXJ8fHx8fDE2OTA0Mzg0Mzc&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
+  color:white;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+}
+nav ul{display:flex;list-style:none;gap:25px;}
+nav a{color:white;text-decoration:none;font-weight:600;}
+
+.hero{
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero h1{font-size:4rem;}
+.hero h3{margin:20px 0;font-size:1.8rem;}
+.btn{
+  background:#2e7d32;
+  padding:12px 30px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  margin-top:20px;
+  transition:.3s;
+}
+.btn:hover{background:#1b5e20;}
+
+.container{padding:80px 10%;}
+.container h2{text-align:center;margin-bottom:30px;color:#2e7d32;}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  transition:.4s;
+  cursor:pointer;
+}
+.card:hover{transform:translateY(-10px);}
+
+.estatisticas{
+  background:#2e7d32;
+  color:white;
+  display:flex;
+  justify-content:space-around;
+  padding:50px;
+  text-align:center;
+}
+.numero h2{font-size:3rem;}
+
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+.galeria img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:15px;
+  transition:.4s;
+  cursor:pointer;
+}
+.galeria img:hover{transform:scale(1.05);}
+
+form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+input, textarea{
+  padding:15px;
+  border:1px solid #ccc;
+  border-radius:10px;
+}
+button{
+  background:#2e7d32;
+  color:white;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+footer{
+  background:#1b5e20;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+@media(max-width:768px){
+  nav{flex-direction:column; gap:15px;}
+  nav ul{flex-direction:column;text-align:center;}
+  .hero h1{font-size:2.5rem;}
+  .estatisticas{flex-direction:column; gap:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h2>Lucio Lopes Boza</h2>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="inicio">
+    <h1>Agrinho 2026</h1>
+    <h3>Agrotecnologia: Conectando o Campo ao Futuro</h3>
+    <p>Projeto desenvolvido por Lucio Lopes Boza</p>
+    <a href="#sobre" class="btn">Explorar</a>
+  </div>
+</header>
+
+<section id="sobre" class="container">
+  <h2>Sobre o Projeto</h2>
+  <p>A agrotecnologia representa a união entre agricultura e inovação. Com drones, sensores, GPS e inteligência de dados, os produtores aumentam a produtividade e preservam recursos naturais.</p>
+  <p>O Agrinho 2026 mostra como a tecnologia transforma o campo em um ambiente mais sustentável e eficiente.</p>
+</section>
+
+<section id="tecnologias" class="container">
+  <h2>Tecnologias no Campo</h2>
+  <div class="cards">
+    <div class="card"><h3>🚁 Drones</h3><p>Monitoramento aéreo das plantações e análise da saúde das lavouras.</p></div>
+    <div class="card"><h3>📡 GPS Agrícola</h3><p>Precisão no plantio, colheita e mapeamento das áreas agrícolas.</p></div>
+    <div class="card"><h3>🌱 Sensores</h3><p>Controle da umidade do solo e monitoramento ambiental.</p></div>
+    <div class="card"><h3>💧 Irrigação Inteligente</h3><p>Economia de água e aumento da eficiência produtiva.</p></div>
+  </div>
+</section>
+
+<section class="estatisticas">
+  <div class="numero"><h2 class="contador" data-target="95">0</h2><p>Precisão Agrícola</p></div>
+  <div class="numero"><h2 class="contador" data-target="80">0</h2><p>Economia de Recursos</p></div>
+  <div class="numero"><h2 class="contador" data-target="100">0</h2><p>Inovação</p></div>
+</section>
+
+<section id="galeria" class="container">
+  <h2>Galeria</h2>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Drone">
+    <img src="https://images.unsplash.com/photo-1581092580495-1c4309eb5b96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="GPS">
+    <img src="https://images.unsplash.com/photo-1617222529310-2c9675c83c2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Sensores">
+    <img src="https://images.unsplash.com/photo-1581092795362-7ef18a7d0f7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Irrigação">
+    <img src="https://images.unsplash.com/photo-1618052354284-efecdeeb2d39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Trator">
+  </div>
+</section>
+
+<section id="contato" class="container">
+  <h2>Contato</h2>
+  <form id="formulario">
+    <input type="text" placeholder="Nome" required>
+    <input type="email" placeholder="E-mail" required>
+    <textarea rows="5" placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <h3>Agrinho 2026</h3>
+  <p>Projeto desenvolvido por Lucio Lopes Boza</p>
+</footer>
+
+<script>
+/* ===== JS ===== */
+// Contadores animados
+const contadores = document.querySelectorAll(".contador");
+contadores.forEach(contador => {
+  const atualizar = () => {
+    const alvo = +contador.getAttribute("data-target");
+    const atual = +contador.innerText;
+    const incremento = alvo / 100;
+   
